@@ -7,22 +7,18 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/FoundIt.styles.css" asp-append-version="true" />
-  <link href="~/css/StyleLayaut.css" rel="stylesheet" />
+    <link href="~/css/StyleLayaut.css" rel="stylesheet" />
 </head>
-<body style="background-color: var(--light-indigo); color: var(--lemon-meringue);">
+<body style="background-color: var(--light-indigo); color: var(--lemon-meringue); padding-top: 70px; padding-bottom: 60px;">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm" style="background-color: var(--light-indigo); color: var(--lemon-meringue);">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm fixed-top" style="background-color: var(--light-indigo); color: var(--lemon-meringue);">
             <div class="container">
-                <div>FoundIt
-                    
-                 </div>
                 <a class="navbar-brand" asp-area="" asp-page="/Index" style="color: var(--honey); text-align:center;">
                     <lord-icon src="https://cdn.lordicon.com/dnoiydox.json"
                                trigger="hover"
                                colors="primary:#FFEBAC,secondary:#7CB8C0"
                                style="width:40px;height:40px;">
-                    </lord-icon>
-                    
+                    </lord-icon> FoundIt
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -93,7 +89,7 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted" style="background-color: var(--light-indigo); color: var(--lemon-meringue);">
+    <footer class="border-top footer text-muted fixed-bottom" style="background-color: var(--light-indigo); color: var(--lemon-meringue);">
         <div class="container text-center">
             &copy; 2024 - FoundIt - <a asp-area="" asp-page="/Privacy" style="color: var(--honey);">Privacy</a>
             <div class="social-icons">
@@ -124,8 +120,6 @@
             </div>
         </div>
     </footer>
-
-
 
     <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

@@ -55,26 +55,27 @@
             <input type="text" class="form-control" id="reward" name="reward">
         </div>
 
-
         <h2>Contact Information</h2>
 
         <div class="mb-3">
-            <label for="name" class="form-label">Name:</label>
-            <input type="text" class="form-control" id="name" name="name" required>
+            <label for="contact-name" class="form-label">Name:</label>
+            <input type="text" class="form-control" id="contact-name" name="contact-name" required>
         </div>
 
         <div class="mb-3">
-            <label for="telephone" class="form-label">Telephone</label>
+            <label for="telephone" class="form-label">Telephone:</label>
             <input type="text" class="form-control" id="telephone" name="telephone" required>
         </div>
 
         <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
+            <label for="email" class="form-label">Email:</label>
             <input type="email" class="form-control" id="email" name="email" required>
         </div>
 
-
-      
+        <div class="mb-3">
+            <label for="extra-info" class="form-label">Extra Info:</label>
+            <textarea class="form-control" id="extra-info" name="extra-info"></textarea>
+        </div>
 
         <button type="submit" class="btn btn-primary">Register</button>
     </form>
@@ -105,7 +106,7 @@
     // Adding a marker on click
     map.on('click', function (e) {
         var marker = L.marker([e.latlng.lat, e.latlng.lng]).addTo(map);
-       // alert("Location selected: " + e.latlng.lat + ", " + e.latlng.lng);
+        // alert("Location selected: " + e.latlng.lat + ", " + e.latlng.lng);
         // You can save the latitude and longitude to your form here.
     });
 </script>
