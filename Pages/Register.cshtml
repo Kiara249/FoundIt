@@ -1,0 +1,111 @@
+﻿@page
+@model FoundIt.Pages.RegisterModel
+@{
+    ViewData["Title"] = "Register Item";
+}
+
+<!-- Custom Styles -->
+<style>
+    .image-preview {
+        width: 100%;
+        max-width: 300px;
+        max-height: 300px;
+        margin-top: 10px;
+        object-fit: cover;
+    }
+
+    #map {
+        height: 400px;
+        width: 100%;
+        margin-top: 20px;
+    }
+</style>
+
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+
+<header>
+    <h1>Register Item</h1>
+    <p>Fill out the form below to register a found or lost item.</p>
+</header>
+
+<section>
+    <h2>Registration Form</h2>
+    <form>
+        <div class="mb-3">
+            <label for="name" class="form-label">Item Name:</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="description" class="form-label">Description:</label>
+            <textarea class="form-control" id="description" name="description" required></textarea>
+        </div>
+
+        <div id="map"></div>
+
+        <div class="mb-3">
+            <label for="photo" class="form-label">Item Photo:</label>
+            <input type="file" class="form-control" id="photo" name="photo" accept="image/*" onchange="previewImage(event)">
+            <img id="imagePreview" class="image-preview" src="#" alt="Image Preview" style="display: none;">
+        </div>
+
+        <div class="mb-3">
+            <label for="reward" class="form-label">Reward (Optional):</label>
+            <input type="text" class="form-control" id="reward" name="reward">
+        </div>
+
+
+        <h2>Contact Information</h2>
+
+        <div class="mb-3">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="telephone" class="form-label">Telephone</label>
+            <input type="text" class="form-control" id="telephone" name="telephone" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+
+
+      
+
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+</section>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+
+<script>
+    // Preview Image
+    function previewImage(event) {
+        var reader = new FileReader();
+        reader.onload = function () {
+            var output = document.getElementById('imagePreview');
+            output.src = reader.result;
+            output.style.display = 'block';
+        };
+        reader.readAsDataURL(event.target.files[0]);
+    }
+
+    // Initialize Leaflet Map
+    var map = L.map('map').setView([-17.392, -66.142], 15); // Set to Tiquipaya, Cochabamba, Bolivia
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Adding a marker on click
+    map.on('click', function (e) {
+        var marker = L.marker([e.latlng.lat, e.latlng.lng]).addTo(map);
+       // alert("Location selected: " + e.latlng.lat + ", " + e.latlng.lng);
+        // You can save the latitude and longitude to your form here.
+    });
+</script>

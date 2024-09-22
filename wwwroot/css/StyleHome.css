@@ -1,0 +1,81 @@
+﻿body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    position: relative;
+    min-height: 100vh;
+}
+
+.background-image {
+    position: fixed; /* Keep the background image fixed */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Set width to full viewport width */
+    height: auto; /* Set height to auto for responsiveness */
+    min-height: 100vh; /* Ensure it covers the full height of the viewport */
+    z-index: -1;
+    opacity: 0.5;
+    background-size: cover; /* Make the image cover the entire area */
+    background-position: center; /* Center the image */
+}
+
+    .background-image:nth-child(2) {
+        animation-delay: 15s; /* Delay for the second image */
+    }
+
+@keyframes move {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+header, section {
+    position: relative;
+    z-index: 1;
+    padding: 40px;
+    margin: 10px;
+    background-color: rgba(167, 181, 254, 0.5); //no carga a veces?
+    border-radius: 10px;
+}
+
+header {
+    text-align: center;
+}
+
+.btn {
+    margin: 5px;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #007bff;
+}
+
+.btn-outline-primary {
+    background-color: #6c757d;
+}
+
+.btn-info {
+    background-color: #17a2b8;
+}
+
+/* Add media queries to control responsiveness */
+@media (min-width: 768px) {
+    .background-image {
+        height: 100vh; /* Ensures the image covers the full height on larger screens */
+        background-attachment: fixed; /* Fixes the image in place */
+    }
+
+    header, section {
+        padding: 60px; /* Increase padding on larger screens */
+        margin: 40px auto; /* Center content */
+        max-width: 800px; /* Limit the max width for better readability */
+    }
+}

@@ -1,0 +1,30 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+:root {
+    --lemon-meringue: #FFEBAC;
+    --periwinkle: #A7B5FE;
+    --columbia: #D4E0F0;
+    --honey: #FEB737;
+    --sea-breeze: #7CB8C0;
+    --light-indigo: #543787;
+}

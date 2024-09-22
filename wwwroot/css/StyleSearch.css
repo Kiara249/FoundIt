@@ -1,0 +1,66 @@
+﻿body {
+    background-color: #5D3AAB; /* Fondo morado */
+    color: #fff;
+}
+
+header h1 {
+    color: #F5A623; /* Color del título */
+}
+
+.search-bar {
+    margin: 20px auto;
+    max-width: 1200px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+    .search-bar input,
+    .search-bar select {
+        padding: 10px 20px;
+        border-radius: 25px;
+        border: none;
+        outline: none;
+        background-color: #fff;
+        color: #5D3AAB;
+        flex-grow: 1;
+    }
+
+    .search-bar .search-icon {
+        color: #F5A623; /* Color del icono */
+    }
+
+.btn-info {
+    background-color: #F5A623;
+    border-color: #F5A623;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+    .card img {
+        border-bottom: 3px solid #F5A623; /* Borde amarillo en las imágenes */
+    }
+
+.card-title {
+    text-align: center;
+    padding: 10px;
+    background-color: #5D3AAB;
+}
+
+.card-body {
+    padding: 10px;
+    background-color: #fff;
+    color: #5D3AAB;
+}
+
+.list-group-item {
+    background-color: #fff;
+    color: #5D3AAB;
+}

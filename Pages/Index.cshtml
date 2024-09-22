@@ -1,0 +1,38 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoundIt</title>
+    <link href="~/css/StyleHome.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Imágenes -->
+    <div class="background-image" style="background-image: url('/images/image0_0(1).jpg');"></div>
+    <div class="background-image" style="background-image: url('/images/image0_0.jpg');"></div>
+
+    <div class="container">
+        <header>
+            <h1>Welcome to FoundIt</h1>
+            <p>Find your lost items and help others find theirs.</p>
+        </header>
+        <section>
+            <h2>How it works?</h2>
+            <p>Register the items you have found or search for those you have lost.</p>
+            <a class="btn btn-outline-primary" asp-page="/Register">Found Item</a>
+            <a class="btn btn-outline-primary" asp-page="/Register">Lost Item</a>
+            <a class="btn btn-info" asp-page="/Search">Search Item</a>
+        </section>
+        <section>
+            <h2>Interactive Map</h2>
+            <p>Select an area on the map to add or search for an item.</p>
+            <!-- Map -->
+        </section>
+    </div>
+</body>
+</html>

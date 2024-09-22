@@ -1,0 +1,117 @@
+﻿@page
+@model FoundIt.Pages.SearchModel
+@{
+    ViewData["Title"] = "Search Item";
+}
+
+<link href="~/css/StyleSearch.css" rel="stylesheet" />
+
+<header class="text-center">
+    <h1>Search Item</h1>
+    <p>Use the form below to search for lost or found items.</p>
+</header>
+
+<section class="container">
+    <!-- Search Bar -->
+    <form class="search-bar">
+        <input type="text" id="search" name="search" placeholder="Search...">
+        <select id="category" name="category">
+            <option value="">All Categories</option>
+            <option value="electronics">Electronics</option>
+            <option value="clothing">Clothing</option>
+            <option value="accessories">Accessories</option>
+            <option value="others">Others</option>
+        </select>
+        <input type="text" id="location" name="location" placeholder="Location">
+        <button type="submit" class="btn btn-info search-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 1-1.415 1.415l-3.85-3.85a6.5 6.5 0 1 0 1.398-1.398zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+            </svg>
+        </button>
+    </form>
+
+    <section>
+        <h2>Search Results</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="image1.jpg" class="card-img-top" alt="Item 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Item 1</h5>
+                        <p class="card-text">Details about item 1...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="image2.jpg" class="card-img-top" alt="Item 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Item 2</h5>
+                        <p class="card-text">Details about item 2...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="image3.jpg" class="card-img-top" alt="Item 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Item 3</h5>
+                        <p class="card-text">Details about item 3...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="image4.jpg" class="card-img-top" alt="Item 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Item 4</h5>
+                        <p class="card-text">Details about item 4...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="image5.jpg" class="card-img-top" alt="Item 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Item 5</h5>
+                        <p class="card-text">Details about item 5...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="image6.jpg" class="card-img-top" alt="Item 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Item 6</h5>
+                        <p class="card-text">Details about item 6...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="image7.jpg" class="card-img-top" alt="Item 7">
+                    <div class="card-body">
+                        <h5 class="card-title">Item 7</h5>
+                        <p class="card-text">Details about item 7...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="image8.jpg" class="card-img-top" alt="Item 8">
+                    <div class="card-body">
+                        <h5 class="card-title">Item 8</h5>
+                        <p class="card-text">Details about item 8...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

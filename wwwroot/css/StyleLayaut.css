@@ -1,0 +1,34 @@
+﻿.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1030; /* Asegura que el navbar esté sobre otros elementos */
+    background-color:yellow;3
+}
+
+body {
+    padding-top: 100px; /* Ajusta este valor para el alto del navbar */
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 40%;
+    padding: 5px 0; /* Ajusta el padding según tus necesidades */
+}
